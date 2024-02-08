@@ -15,5 +15,10 @@ router.post("/add",async(req,res)=>{
     })
 })
 
+router.get("/view",async(req,res)=>{
+    let data=await carmodel.find()
+    res.json(data)
+})
+
 
 module.exports=router
